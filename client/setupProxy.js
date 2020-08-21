@@ -1,5 +1,5 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
-const PORT_FRONTEND = require('./env.json').PORT_FRONTEND;
+const PORT_FRONTEND = require('./env-front.json').PORT_FRONTEND;
 
 module.exports = function (app) {
 
