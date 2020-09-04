@@ -1,4 +1,4 @@
-# react-shop-app
+# GlamStudio MakeUp
 Aplicación web [glamstudio.com.ar] en ReactJS - Tienda virtual Full Stack MERN
 
 
