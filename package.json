@@ -1,8 +1,8 @@
 {
-  "name": "react-boiler-plate",
+  "name": "glam-tienda-react",
   "version": "2.0.0",
-  "description": "react boiler plate",
-  "main": "index.js",
+  "description": "Tienda virtual glamstudio.com.ar",
+  "main": "./server/index.js",
   "engine": {
     "node": "10.16.0",
     "npm": "6.9.0"
