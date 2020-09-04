@@ -38,8 +38,7 @@ console.log("EL PATH: " + elPath)
 app.use('/uploads', express.static(elPath))
 
 // Serve static assets if in production
-if (process.env.NODE_ENV !== "production") {
-
+if (process.env.NODE_ENV === "production" || require("../env.json").ENV === "prod" ) {
   // Set static folder
   //app.use(express.static("client/build"));
   const pathProd = path.join(__dirname, '../client/build');
