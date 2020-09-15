@@ -9,7 +9,6 @@ import { types, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
 import { Button } from 'react-bootstrap';
 
-
 const { Meta } = Card;
 
 function LandingPage() {
@@ -31,10 +30,10 @@ function LandingPage() {
             limit: Limit
         }
         getProducts(variables)
-    }, [])   // []
+    }, [])
 
     const getProducts = (variables) => {
-        Axios.post('/api/product/getProducts', variables)
+        Axios.post('https://glamstudio.com.ar/api/product/getProducts', variables)
             .then(response => {
                 if (response.data.success) {
                     if (variables.loadMore) {
@@ -45,9 +44,9 @@ function LandingPage() {
                     setPostSize(response.data.postSize)
                 } else {
                     alert('Falló carga de productos')
-                }
-            })
-    }
+                };
+            });
+    };
 
     const onLoadMore = () => {
         let skip = Skip + Limit;

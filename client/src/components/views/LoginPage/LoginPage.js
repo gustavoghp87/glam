@@ -29,7 +29,7 @@ function LoginPage(props) {
 
   const responseFacebook = (response) => {
     //console.log(response);
-    fetch('api/users/login-with-facebook', {
+    fetch('https://glamstudio.com.ar/api/users/login-with-facebook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ function LoginPage(props) {
 
   const responseGoogle = (response) => {
     //console.log(response)
-    fetch('api/users/google', {
+    fetch('https://glamstudio.com.ar/api/users/google', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
