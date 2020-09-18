@@ -85,7 +85,7 @@ router.post("/register", (req, res) => {
 
 
 router.post("/login", (req, res) => {
-    console.log("Login...", req.body.email, req.body.password);
+
     User.findOne({ email: req.body.email }, (err, user) => {
         if (err) console.log(err);
         if (!user)
@@ -101,7 +101,7 @@ router.post("/login", (req, res) => {
 
             user.generateToken((err, user) => {
                 if (err) return res.status(400).send(err);
-                console.log("Token", user.tokenExp);
+                console.log("Token", user.token);
                 res.cookie("w_authExp", user.tokenExp);
                 res
                     .cookie("w_auth", user.token)

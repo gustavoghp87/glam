@@ -8,7 +8,7 @@ let auth = (req, res, next) => {
   //   .cookie("google", "false")
   //   .cookie("glAccessToken", "")
   //   .cookie("w_auth", "")
-  console.log("Ingreso en auth.js ........................ ")
+  console.log("Ingreso en auth.js ........................ ", req.cookies.w_auth)
 
   if (req.cookies.facebook=="true") {
     console.log("Ingreso en auth.js 1,", req.cookies.fbAccessToken)
