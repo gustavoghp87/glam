@@ -20,8 +20,8 @@ function LandingPage() {
 
         <div style={presentation}>
 
-            <h1 style={{textAlign:'center', marginTop:'30px'}}> GLAMSTUDIO </h1>
-            <h2 style={{textAlign:'center', marginBottom:'20px'}}> Senillosa 226 - CABALLITO </h2>
+            <h1 style={{textAlign:'center', marginTop:'30px', color:'violet'}}> GLAMSTUDIO </h1>
+            <h3 style={{textAlign:'center', marginBottom:'20px'}}> Senillosa 226 - CABALLITO </h3>
 
             <Carousel>
                 <Carousel.Item style={carrusel}>

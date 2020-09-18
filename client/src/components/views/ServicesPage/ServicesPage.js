@@ -40,7 +40,7 @@ function ServicesPage() {
                     <Card.Footer></Card.Footer>
                 </Card>
                 <Card style={cards}>
-                    <Card.Img variant="top" src="imgs/services6.png" style={images}/>
+                    <Card.Img variant="top" src="imgs/services8.png" style={images}/>
                     <Card.Body>
                         <Card.Title style={title}> CABELLO </Card.Title>
                         <Card.Text>
