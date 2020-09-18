@@ -85,6 +85,7 @@ router.post("/register", (req, res) => {
 
 
 router.post("/login", (req, res) => {
+    console.log("Login...", req.body.email, req.body.password);
     User.findOne({ email: req.body.email }, (err, user) => {
         if (err) console.log(err);
         if (!user)
