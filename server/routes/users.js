@@ -66,7 +66,7 @@ router.get("/auth", auth, async (req, res) => {
         }
     }
 
-    console.log("PACK USUARIO:", pack)
+    //console.log("PACK USUARIO:", pack)
     res.status(200).json(pack);
 });
 
@@ -100,6 +100,7 @@ router.post("/login", (req, res) => {
 
             user.generateToken((err, user) => {
                 if (err) return res.status(400).send(err);
+                console.log("Token", user.tokenExp);
                 res.cookie("w_authExp", user.tokenExp);
                 res
                     .cookie("w_auth", user.token)

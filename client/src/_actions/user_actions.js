@@ -18,6 +18,7 @@ import {
 
 
 export function registerUser(dataToSubmit) {
+    console.log(dataToSubmit);
     const request = axios.post(`${USER_SERVER}/register`, dataToSubmit)
         .then(response => response.data);
 
