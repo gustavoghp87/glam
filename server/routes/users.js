@@ -66,7 +66,7 @@ router.get("/auth", auth, async (req, res) => {
         }
     }
 
-    //console.log("PACK USUARIO:", pack)
+    console.log("PACK USUARIO:", pack)
     res.status(200).json(pack);
 });
 
@@ -86,6 +86,7 @@ router.post("/register", (req, res) => {
 
 router.post("/login", (req, res) => {
     User.findOne({ email: req.body.email }, (err, user) => {
+        if (err) console.log(err);
         if (!user)
             return res.json({
                 loginSuccess: false,
@@ -93,6 +94,7 @@ router.post("/login", (req, res) => {
             });
 
         user.comparePassword(req.body.password, (err, isMatch) => {
+            if (err) console.log(err);
             if (!isMatch)
                 return res.json({ loginSuccess: false, message: "Contraseña mal escrita" });
 

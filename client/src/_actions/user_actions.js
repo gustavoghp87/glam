@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { USER_SERVER } from '../components/Config.js';
+import { USER_SERVER, PRODUCT_SERVER } from '../components/Config.js';
 import {
     LOGIN_USER,
     REGISTER_USER,
@@ -99,7 +99,7 @@ export function subtractCartItemFromDetail(_id) {              // mía
 
 
 export function subtractCartItemFromCartPage(id) {
-    const request = axios.get(`/api/users/subtractOneToCart?productId=${id}`)
+    const request = axios.get(`${USER_SERVER}/subtractOneToCart?productId=${id}`)
         .then(response => response.data
         );
 
@@ -111,7 +111,7 @@ export function subtractCartItemFromCartPage(id) {
 
 
 export function removeCartItemFromDetail(id) {
-    const request = axios.get(`/api/users/removeFromCart?_id=${id}`)
+    const request = axios.get(`${USER_SERVER}/removeFromCart?_id=${id}`)
         .then(response => {
             response.data.cart.forEach(item => {
                 response.data.cartDetail.forEach((k, i) => {
@@ -131,7 +131,7 @@ export function removeCartItemFromDetail(id) {
 
 
 export function removeCartItemFromCartPage(id) {
-    const request = axios.get(`/api/users/removeFromCart?_id=${id}`)
+    const request = axios.get(`${USER_SERVER}/removeFromCart?_id=${id}`)
         .then(response => {
             response.data.cart.forEach(item => {
                 response.data.cartDetail.forEach((k, i) => {
@@ -151,7 +151,7 @@ export function removeCartItemFromCartPage(id) {
 
 
 export function getCartItems(cartItems, userCart) {
-    const request = axios.get(`/api/product/products_by_id?id=${cartItems}&type=array`)
+    const request = axios.get(`${PRODUCT_SERVER}/products_by_id?id=${cartItems}&type=array`)
         .then(response => {
 
             //Make CartDetail inside Redux Store 
