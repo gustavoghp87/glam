@@ -743,7 +743,7 @@ router.post('/login-with-facebook', async (req, res) => {
             res.json({message:"Falló la verificación", isEmail:true, verif:false})
         }
     }
-    console.log("COOKIES:", req.cookies);
+    console.log("COOKIES:", req.cookie);
 });
 
 
