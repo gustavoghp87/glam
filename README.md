@@ -15,12 +15,19 @@ Corriendo en AWS EC2 por NginX con proxy inverso a PM2, dominio comprado en goda
 -------------------------------------------------------------------------------------------------
 
 For use: create a env.json file in the root folder and:
+
 {
+
     "PORT_BACKEND": 5000,
+    
     "DB_CONECTION": "mongodb...",
+    
     "access_token": "...",   (Mercado Libre)
+    
     "ENV": "dev"   (or "prod")
+    
 }
+
 
  [glamstudio.com.ar]: <http://glamstudio.com.ar>
  [jaewonhimnae/react-shop-app]: <https://github.com/jaewonhimnae/react-shop-app>
