@@ -120,7 +120,6 @@ function ProductInfo(props) {
                 <Descriptions.Item label="Envíos" style={{fontWeight:'600', paddingBottom:'8px', paddingLeft:'15px'}}> Sí </Descriptions.Item>
                 <Descriptions.Item label="Descripción" style={{backgroundColor:'lightgray', paddingLeft:'15px'}}> {Product.description} </Descriptions.Item>
             </Descriptions>
-            <span style={isNotAdmin, {fontWeiht:'600'}}>Grupo:</span> {clasif[Product.types]}
 
             <Descriptions title="Información del Producto" style={isAdmin}>
                 <Descriptions.Item label="Precio" style={{fontWeight:'600'}}> ${Product.price} </Descriptions.Item>
@@ -128,7 +127,7 @@ function ProductInfo(props) {
                 <Descriptions.Item label="Vistos"> {Product.views} </Descriptions.Item>
                 <Descriptions.Item label="Descripción"> {Product.description} </Descriptions.Item>
             </Descriptions>
-            <span style={{isAdmin, fontWeiht:'600'}}> &nbsp; Grupo:</span> {clasif[Product.types]}
+            <span style={{fontWeiht:'600'}}> &nbsp; Grupo:</span> {clasif[Product.types]}
             
 
             <br />

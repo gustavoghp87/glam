@@ -3,6 +3,7 @@ import { Typography, Button, Form, Input } from 'antd';
 import FileUpload from '../../utils/FileUpload';
 import Axios from 'axios';
 import clasif from '../../utils/Clasif.json';
+import { PRODUCT_SERVER} from '../../Config';
 
 
 const { Title } = Typography;
@@ -71,7 +72,7 @@ function UploadProductPage(props) {
             types: TypeValue,
         }
 
-        Axios.post('/api/product/uploadProduct', variables)
+        Axios.post(`${PRODUCT_SERVER}/uploadProduct`, variables)
             .then(response => {
                 if (response.data.success) {
                     alert('Producto subido con éxito')

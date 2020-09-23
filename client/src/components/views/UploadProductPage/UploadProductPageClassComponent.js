@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Typography, Button, Form, Input } from 'antd';
 import axios from 'axios';
 import FileUpload from '../../utils/FileUpload';
-
+import { PRODUCT_SERVER } from '../../Config';
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -62,7 +62,7 @@ export class UploadProductPage extends Component {
             price: this.state.price
         }
 
-        axios.post('/api/product/uploadProduct', variables)
+        axios.post(`${PRODUCT_SERVER}/uploadProduct`, variables)
             .then(response => {
                 if (response.data.success) {
                     alert('Subido con éxito')

@@ -8,6 +8,7 @@ import RadioBox from './Sections/RadioBox';
 import { types, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
 import { Button } from 'react-bootstrap';
+import { PRODUCT_SERVER } from '../../Config';
 
 const { Meta } = Card;
 
@@ -33,7 +34,7 @@ function LandingPage() {
     }, [])
 
     const getProducts = (variables) => {
-        Axios.post('https://glamstudio.com.ar/api/product/getProducts', variables)
+        Axios.post(`${PRODUCT_SERVER}/getProducts`, variables)
             .then(response => {
                 if (response.data.success) {
                     if (variables.loadMore) {

@@ -6,6 +6,7 @@ import ProductInfo from './Sections/ProductInfo';
 import { addToCartFromDetail, subtractCartItemFromDetail, removeCartItemFromDetail } from '../../../_actions/user_actions';
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
+import { PRODUCT_SERVER } from '../../Config';
 
 
 function DetailProductPage(props) {
@@ -16,12 +17,12 @@ function DetailProductPage(props) {
     const [MostrarImgs, setMostrarImgs] = useState({display:'block'});
 
 
-    useEffect(() => {      //cada vez que carga el componente, llama al servidor para consultar el producto
-        Axios.get(`/api/product/products_by_id?id=${productId}&type=single`)
+    useEffect(() => {
+        Axios.get(`${PRODUCT_SERVER}/products_by_id?id=${productId}&type=single`)
             .then(response => {
-                setProduct(response.data[0])     // cada vez que cambia el producto, se reinicia el componente
+                setProduct(response.data[0])
             })
-    }, [MostrarImgs])   // []
+    }, [MostrarImgs])
 
     const mostrarImgsHandler = () => { setMostrarImgs({display:'block'}) };
 
@@ -56,7 +57,7 @@ function DetailProductPage(props) {
 
         const config = {
             method: 'POST',
-            url: `/api/product/editProduct?_id=${productId}`,
+            url: `${PRODUCT_SERVER}/editProduct?_id=${productId}`,
             headers: {'Content-Type': 'application/json'},
             data: paquete
         };

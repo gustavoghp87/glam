@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Dropzone from 'react-dropzone';
 import Axios from 'axios';
 import { PlusOutlined } from '@ant-design/icons';
+import { PRODUCT_SERVER } from '../Config';
 
 
 function FileUpload(props) {
@@ -16,7 +17,7 @@ function FileUpload(props) {
         }
         formData.append("file", files[0])
         //save the Image we chose inside the Node Server 
-        Axios.post('/api/product/uploadImage', formData, config)    //    GUARDAAAAAAAAAAAA
+        Axios.post(`${PRODUCT_SERVER}/uploadImage`, formData, config)
             .then(response => {
                 if (response.data.success) {
                     setImages([...Images, response.data.image])

@@ -9,8 +9,8 @@ function RadioBox(props) {
 
     const renderRadioBox = () => (
         props.list && props.list.map( (value) => (
-            <Row style={{marginBottom:'12px'}}>
-                <Radio key={value._id} value={`${value._id}`}>{value.name}</Radio>
+            <Row style={{marginBottom:'12px'}} key={value._id}>
+                <Radio value={`${value._id}`}>{value.name}</Radio>
             </Row>
         ))
     )
