@@ -96,7 +96,7 @@ function RightMenu(props) {
         </Menu.Item>
         <hr id="navbarInv" />
 
-        <Menu.Item key="6" id="cart">
+        <Menu.Item key="6" id="cart" style={{padding:'0px'}}>
           <Badge count={user.userData && numCarrito}>
 
             <a href="/user/cart" style={badge}>
@@ -131,7 +131,7 @@ function RightMenu(props) {
         </Menu.Item>
         <hr id="navbarInv" />
 
-        <Menu.Item key="10" id="cart">
+        <Menu.Item key="10" id="cart" style={{padding:'0px'}}>
           <Badge count={user.userData && numCarrito}>
 
             <a href="/user/cart" style={badge}>
