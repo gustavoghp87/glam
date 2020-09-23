@@ -10,7 +10,7 @@ Núcleo tomado de [jaewonhimnae/react-shop-app] y luego completado y personaliza
 
 Escrita en ReactJS y NodeJS, base de datos clouster de Atlas (MongoDB).
 
-Corriendo en AWS EC2 por NginX con proxy inverso a PM2, dominio comprado en godaddy.
+Corriendo en AWS EC2 por NginX con proxy inverso a PM2.
 
 -------------------------------------------------------------------------------------------------
 
