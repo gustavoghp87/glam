@@ -8,7 +8,6 @@ let auth = (req, res, next) => {
   //   .cookie("google", "false")
   //   .cookie("glAccessToken", "")
   //   .cookie("w_auth", "")
-  console.log("Ingreso en auth.js ........................ ", req.cookies.w_auth)
 
   if (req.cookies.facebook=="true") {
     console.log("Ingreso en auth.js 1,", req.cookies.fbAccessToken)
@@ -82,13 +81,13 @@ let auth = (req, res, next) => {
 
 
   if (req.cookies.google!="true" && req.cookies.facebook!="true") {
-    console.log("Ingreso en auth.js 3,", req)
+    console.log("Ingreso en auth.js 3,")
     let token = req.cookies.w_auth;
     User.findByToken(token, (err, user) => {
       if (err) throw err;
       if (!user) {
         return res
-          .cookie("w_auth", "")
+          //.cookie("w_auth", "")
           .json({isAuth: false, error: true});
       }
  

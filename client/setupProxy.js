@@ -1,13 +1,14 @@
 // const { createProxyMiddleware } = require('http-proxy-middleware');
-// const PORT_FRONTEND = require('./env-front.json').PORT_FRONTEND;
-// console.log("...............", PORT_FRONTEND);
+// import { createProxyMiddleware } from 'http-proxy-middleware';
+//const PORT_BACKEND_PROXY = require('./env-front.json').PORT_BACKEND_PROXY;
+//console.log("...............", PORT_BACKEND_PROXY);
 
-// module.exports = function (app) {
+// module.exports = (app) => {
 
 //     app.use(
 //         '/api',
 //         createProxyMiddleware({
-//             target: `http://localhost:${PORT_FRONTEND}`,
+//             target: 'http://localhost:5000/',
 //             changeOrigin: true,
 //         })
 //     );

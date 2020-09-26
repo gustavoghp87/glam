@@ -18,7 +18,7 @@ function LeftMenu(props) {
       <Menu.SubMenu title={<span>Menú</span>} style={{display:'none'}}>
         <Menu.ItemGroup title="Shopping" style={{color:'#40a9ff', fontWeight:800}}>
           <a href="/servicios">
-            <Menu.Item style={{paddingLeft:'18%', paddingTop:'5%', paddingBottom:'8%', fontWeight:400}}>Servicios</Menu.Item> 
+            <Menu.Item style={{paddingLeft:'18%', paddingTop:'5z%', paddingBottom:'8%', fontWeight:400}}>Servicios</Menu.Item> 
           </a>
           <a href="/productos">
             <Menu.Item style={{paddingLeft:'18%', paddingTop:'10%', paddingBottom:'8%', fontWeight:400}}>Productos</Menu.Item> 

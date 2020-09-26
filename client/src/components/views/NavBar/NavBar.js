@@ -95,7 +95,7 @@ function NavBar(props) {
             <a href="/history" style={estiloHistory2} id="compras2">Compras</a>
           </Menu.Item>
   
-          <Menu.Item id="cart" style={{padding:'0px 0px 10px 3px'}}>
+          <Menu.Item id="cart">
             <Badge count={user.userData && numCarrito}>
   
               <span> Mi Carrito &nbsp; </span>
@@ -121,7 +121,7 @@ function NavBar(props) {
             <a href="/history" style={estiloHistory2} id="compras2">Compras</a>
           </Menu.Item>
   
-          <Menu.Item id="cart" style={{padding:'0px 0px 10px 3px'}}>
+          <Menu.Item id="cart">
             <Badge count={user.userData && numCarrito}>
   
               <span> Mi Carrito &nbsp; </span>
@@ -176,7 +176,7 @@ function NavBar(props) {
           </Menu.Item>
           <hr />
   
-          <Menu.Item id="cart" style={{padding:'0px 0px 10px 3px'}}>
+          <Menu.Item id="cart">
             <Badge count={user.userData && numCarrito}>
 
               <span> Mi Carrito &nbsp; </span>
@@ -210,7 +210,7 @@ function NavBar(props) {
           </Menu.Item>
           <hr />
   
-          <Menu.Item id="cart" style={{padding:'0px 0px 10px 3px'}}>
+          <Menu.Item id="cart">
             <Badge count={user.userData && numCarrito}>
 
               <span> Mi Carrito &nbsp; </span>
