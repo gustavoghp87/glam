@@ -244,7 +244,7 @@ function LoginPage(props) {
         <FacebookLogin
           appId="278783286733600"
           autoLoad={false}
-          isMobile={true}
+ 
           fields="name,email,picture"
           //onClick={componentClicked}
           callback={responseFacebook}
