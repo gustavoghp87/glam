@@ -244,6 +244,7 @@ function LoginPage(props) {
         <FacebookLogin
           appId="278783286733600"
           autoLoad={false}
+          isMobile={true}
           fields="name,email,picture"
           //onClick={componentClicked}
           callback={responseFacebook}
@@ -269,8 +270,8 @@ function LoginPage(props) {
         <GoogleLogin
           clientId="517220495690-7pv1amnufvmpont2bi6ovfqn9g2m1fbj.apps.googleusercontent.com"
           render={renderProps => (
-            <button onClick={renderProps.onClick} disabled={renderProps.disabled} style={{backgroundColor:'red', height:'62px', minWidth:'279px'}}>
-              <GooglePlusOutlined  style={{fontSize:25, paddingTop:'0px'}} />
+            <button onClick={renderProps.onClick} disabled={renderProps.disabled} style={{backgroundColor:'red', height:'62px', minWidth:'249px'}}>
+              <GooglePlusOutlined  style={{fontSize:25, paddingTop:'0'}} />
               <span style={{fontSize:'1.1rem', fontWeight:'500'}}> &nbsp; INGRESAR CON GOOGLE </span>
             </button>
           )}
