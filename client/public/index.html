@@ -33,62 +33,6 @@
   <body>
     <noscript>Tu navegador tiene deshabilitado javascript.</noscript>
 
-<!-- 
-    <fb:login-button onclick="loginWithFacebook()"></fb:login-button>
-
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="fbLoginBtn"></fb:login-button>
-
-
-    <div id="fb-root"></div>
-
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0&appId=278783286733600" nonce="x57oi5CS"></script>
-    
-    <div class="fb-login-button" data-size="large" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="true" data-width="" onclick="loginWithFacebook()"></div>
-
-    <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="true" data-width=""></div> Ocultar si hay log -->
-
-    <!-- <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '278783286733600',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v7.0'
-        });
-
-        FB.AppEvents.logPageView();
-        //fbSDKLoader();
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      } (document, 'script', 'facebook-jssdk'));
-
-
-      function loginWithFacebook() {
-        FB.login( response => {
-          console.log(response)
-          const { authResponse: {accessToken, userID}} = response;
-          fetch('api/users/login-with-facebook', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ accessToken, userID })
-          }).then( res => {
-            console.log(res)
-          })
-        }, {scope: 'public_profile, email'} )
-        return false
-      };
-
-    </script> -->
-
-
     <div>
       <div style="width:80px; overflow:hidden; color:#fff; text-align:center; padding:0; margin:0; position:fixed; right:0; bottom:1.5%; z-index:25;">
           <a class="demo-button" href="https://api.whatsapp.com/send?phone=5491169575866&amp;source=&amp;data=" target="_blank" rel="noopener noreferrer" data-animate="fadeInRight" data-animated="true">
