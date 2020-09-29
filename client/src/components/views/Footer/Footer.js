@@ -45,7 +45,7 @@ function Footer() {
                         <br/>
                         <div>
                             <a href="https://glamstudio.com.ar" style={{color:'violet', fontWeight:'600'}}> <SketchOutlined style={{fontSize:30}} />
-                            <span style={{fontSize:'1.8rem'}}> &nbsp; GlamStudio.com.ar </span> </a>
+                            <span style={{fontSize:'1.5rem'}}> &nbsp; GlamStudio.com.ar </span> </a>
                         </div>
                     </div>
                 </div>
