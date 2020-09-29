@@ -33,7 +33,7 @@ app.use('/uploads', express.static(path.resolve(__dirname, '..', '/uploads')))
 if (process.env.NODE_ENV === "production" || require("../env.json").ENV === "prod" ) {
   const pathProd = path.resolve(__dirname, '..', 'client', 'build');
   console.log("PATH PRODUCCIÓN: ", pathProd);
-  app.use(express.static(pathProd));
+  app.use('/build', express.static(pathProd));
 
   app.get("*", (_, res) => {
     res.sendFile(path.resolve(__dirname, "..", "client", "build", "index.html"));
