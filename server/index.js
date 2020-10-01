@@ -28,12 +28,12 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/product', require('./routes/product'));
 
 //app.use(express.static(elPath));
-app.use('/uploads', express.static(path.resolve(__dirname, '..', '/uploads')))
+app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
 
 if (process.env.NODE_ENV === "production" || require("../env.json").ENV === "prod" ) {
   const pathProd = path.resolve(__dirname, '..', 'client', 'build');
   console.log("PATH PRODUCCIÓN: ", pathProd);
-  app.use('/build', express.static(pathProd));
+  app.use('/', express.static(pathProd));
 
   app.get("*", (_, res) => {
     res.sendFile(path.resolve(__dirname, "..", "client", "build", "index.html"));
