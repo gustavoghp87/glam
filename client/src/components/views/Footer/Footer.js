@@ -43,9 +43,11 @@ function Footer() {
                             <a href={'https://api.whatsapp.com/send?phone=5491169575866&amp;source=&amp;data='} target={'_blank'} rel="noopener noreferrer" style={{color:'violet', marginLeft:'30px'}}> <WhatsAppOutlined style={estiloIcons}/> </a>
                         </span>
                         <br/>
-                        <div>
-                            <a href="https://glamstudio.com.ar" style={{color:'violet', fontWeight:'600'}}> <SketchOutlined style={{fontSize:30}} />
-                            <span style={{fontSize:'1.5rem'}}> &nbsp; GlamStudio.com.ar </span> </a>
+                        <div style={{display:'display', alignItems:'center', height:'70px', marginTop: window.screen.width>990 ? '10px' : '15px'}}>
+                            <a href="https://glamstudio.com.ar" style={{color:'violet', fontWeight:'600'}}>
+                                <SketchOutlined style={{fontSize: window.screen.width>990 ? 40 : 27}} />
+                                <span style={{fontSize: window.screen.width>990 ? '1.5rem' : '1.3rem'}}> &nbsp; GlamStudio.com.ar </span>
+                            </a>
                         </div>
                     </div>
                 </div>
